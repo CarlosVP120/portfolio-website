@@ -7,9 +7,13 @@ import { useSectionInView } from "@/lib/hooks";
 import { sendEmail } from "@/actions/sendEmail";
 import SubmitBtn from "./submit-btn";
 import toast from "react-hot-toast";
+import emailjs from "@emailjs/browser";
 
 export default function Contact() {
   const { ref } = useSectionInView("Contact");
+
+  const [email, setEmail] = React.useState("");
+  const [message, setMessage] = React.useState("");
 
   return (
     <motion.section
@@ -41,15 +45,26 @@ export default function Contact() {
 
       <form
         className="mt-10 flex flex-col dark:text-black"
-        action={async (formData) => {
-          const { data, error } = await sendEmail(formData);
-
-          if (error) {
-            toast.error(error);
-            return;
-          }
-
-          toast.success("Email sent successfully!");
+        action={async () => {
+          emailjs
+            .send(
+              "service_n98qgep",
+              "template_yyvrqqr",
+              {
+                email: email,
+                message: message,
+              },
+              "N00Fs9C1hV_wWVj-x"
+            )
+            .then(
+              (result) => {
+                toast.success("Email sent successfully!"); // Show success toast notification
+              },
+              (error) => {
+                toast.error("There was an error sending the email."); // Show error toast notification
+                return;
+              }
+            );
         }}
       >
         <input
@@ -59,6 +74,8 @@ export default function Contact() {
           required
           maxLength={500}
           placeholder="Your email"
+          onChange={(e) => setEmail(e.target.value)}
+          value={email}
         />
         <textarea
           className="h-52 my-3 rounded-lg borderBlack p-4 dark:bg-white dark:bg-opacity-80 dark:focus:bg-opacity-100 transition-all dark:outline-none"
@@ -66,6 +83,8 @@ export default function Contact() {
           placeholder="Your message"
           required
           maxLength={5000}
+          onChange={(e) => setMessage(e.target.value)}
+          value={message}
         />
         <SubmitBtn />
       </form>

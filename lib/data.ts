@@ -91,7 +91,7 @@ export const projectsData = [
       "Full Stack E-Commerce website that allows users to buy beaded bags and jewelry.",
     tags: ["React", "Firebase", "Tailwind", "Stripe", "Node.js"],
     imageUrl: soldnoche,
-    link: "https://wordanalytics.app",
+    link: "https://www.soldnoche.com/",
   },
 ] as const;
 

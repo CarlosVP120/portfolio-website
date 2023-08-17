@@ -2,9 +2,9 @@ import React from "react";
 import { CgWorkAlt } from "react-icons/cg";
 import { FaReact } from "react-icons/fa";
 import { LuGraduationCap } from "react-icons/lu";
-import corpcommentImg from "@/public/corpcomment.png";
-import rmtdevImg from "@/public/rmtdev.png";
-import wordanalyticsImg from "@/public/wordanalytics.png";
+import apeironai from "@/public/apeironai.png";
+import solfund from "@/public/solfund.png";
+import soldnoche from "@/public/soldnoche.png";
 
 export const links = [
   {
@@ -35,56 +35,68 @@ export const links = [
 
 export const experiencesData = [
   {
-    title: "Graduated bootcamp",
-    location: "Miami, FL",
+    title: "Automation Engineer Intern",
+    location: "Guadalajara, JAL",
     description:
-      "I graduated after 6 months of studying. I immediately found a job as a front-end developer.",
-    icon: React.createElement(LuGraduationCap),
-    date: "2019",
-  },
-  {
-    title: "Front-End Developer",
-    location: "Orlando, FL",
-    description:
-      "I worked as a front-end developer for 2 years in 1 job and 1 year in another job. I also upskilled to the full stack.",
+      "I worked as an automation engineer intern in Avnet, inc. for 6 months. I learned about the manufacturing industry and how to automate the daily tasks of the sales team.",
     icon: React.createElement(CgWorkAlt),
-    date: "2019 - 2021",
+    date: "2022",
   },
   {
-    title: "Full-Stack Developer",
-    location: "Houston, TX",
+    title: "Hackathon Winner",
+    location: "Guadalajara, JAL",
     description:
-      "I'm now a full-stack developer working as a freelancer. My stack includes React, Next.js, TypeScript, Tailwind, Prisma and MongoDB. I'm open to full-time opportunities.",
+      "I won the first place in the 2023 Blockchain Hackathon. I created a web app that allows users to create and fund projects using the Ethereum blockchain.",
     icon: React.createElement(FaReact),
-    date: "2021 - present",
+    date: "2023",
+  },
+  {
+    title: "Hackathon Winner",
+    location: "Guadalajara, JAL",
+    description:
+      "I won the first place in the 2023 Hidrohack Hackathon. I created a Python program to predict the quality of the water in the city of Guadalajara based on the data provided by the government.",
+    icon: React.createElement(FaReact),
+    date: "2023",
+  },
+  {
+    title: "Founder & CEO",
+    location: "Guadalajara, JAL",
+    description:
+      "I founded ApeironAI, an AI Automation Agency that helps companies automate their business using AI tools like AI Chatbots, Content Generation Systems, and AI enhanced automations.",
+    icon: React.createElement(FaReact),
+    date: "2023",
   },
 ] as const;
 
 export const projectsData = [
   {
-    title: "CorpComment",
+    title: "ApeironAI",
     description:
-      "I worked as a full-stack developer on this startup project for 2 years. Users can give public feedback to companies.",
-    tags: ["React", "Next.js", "MongoDB", "Tailwind", "Prisma"],
-    imageUrl: corpcommentImg,
+      "I created this full-stack project in a period of 2 months. Users can use AI to make their daily tasks easier.",
+    tags: ["React", "Next.js", "Firebase", "Tailwind", "GPT-3"],
+    imageUrl: apeironai,
+    link: "https://www.apeiron-ai.com/",
   },
   {
-    title: "rmtDev",
+    title: "SolFund",
     description:
-      "Job board for remote developer jobs. I was the front-end developer. It has features like filtering, sorting and pagination.",
-    tags: ["React", "TypeScript", "Next.js", "Tailwind", "Redux"],
-    imageUrl: rmtdevImg,
+      "Full Stack Descentralized Application (DApp) that allows users to create and fund projects using the Ethereum blockchain.",
+    tags: ["Next.js", "Tailwind", "Solidity", "Ethereum", "Web3"],
+    imageUrl: solfund,
+    link: "https://sol-funding.vercel.app/",
   },
   {
     title: "Word Analytics",
     description:
       "A public web app for quick analytics on text. It shows word count, character count and social media post limits.",
     tags: ["React", "Next.js", "SQL", "Tailwind", "Framer"],
-    imageUrl: wordanalyticsImg,
+    imageUrl: soldnoche,
+    link: "https://wordanalytics.app",
   },
 ] as const;
 
 export const skillsData = [
+  "C++",
   "HTML",
   "CSS",
   "JavaScript",
@@ -94,14 +106,11 @@ export const skillsData = [
   "Node.js",
   "Git",
   "Tailwind",
-  "Prisma",
-  "MongoDB",
-  "Redux",
-  "GraphQL",
-  "Apollo",
+  "Firebase",
+  "MySQL",
+  "ThreeJS",
   "Express",
-  "PostgreSQL",
   "Python",
-  "Django",
-  "Framer Motion",
+  "Solidity",
+  "Matlab",
 ] as const;

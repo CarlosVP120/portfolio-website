@@ -86,10 +86,10 @@ export const projectsData = [
     link: "https://sol-funding.vercel.app/",
   },
   {
-    title: "Word Analytics",
+    title: "Sol D Noche: E-Commerce",
     description:
-      "A public web app for quick analytics on text. It shows word count, character count and social media post limits.",
-    tags: ["React", "Next.js", "SQL", "Tailwind", "Framer"],
+      "Full Stack E-Commerce website that allows users to buy beaded bags and jewelry.",
+    tags: ["React", "Firebase", "Tailwind", "Stripe", "Node.js"],
     imageUrl: soldnoche,
     link: "https://wordanalytics.app",
   },

@@ -5,6 +5,7 @@ import { LuGraduationCap } from "react-icons/lu";
 import apeironai from "@/public/apeironai.png";
 import solfund from "@/public/solfund.png";
 import soldnoche from "@/public/soldnoche.png";
+import chatpdf from "@/public/chatpdf.png";
 
 export const links = [
   {
@@ -76,6 +77,14 @@ export const projectsData = [
     tags: ["React", "Next.js", "Firebase", "Tailwind", "GPT-3"],
     imageUrl: apeironai,
     link: "https://www.apeiron-ai.com/",
+  },
+  {
+    title: "ChatPDF",
+    description:
+      "Full Stack SaaS: AI Chatbot that allows users to ask questions about a PDF document using vector embeddings.",
+    tags: ["React", "Neon", "Tailwind", "Pinecone", "Node.js", "GPT"],
+    imageUrl: chatpdf,
+    link: "https://gpt-chatpdf.vercel.app/",
   },
   {
     title: "SolFund",
